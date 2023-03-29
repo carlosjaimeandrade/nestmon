@@ -19,7 +19,7 @@ migration
 Sempre bom rodar um Build antes
 npx typeorm migration:create  ./src/migrations/CourseRefatoring // na nova versão deve ser passado o caminho completo
 npx typeorm migration:revert
-npx typeorm migration:run -d <caminho do data sorce dis/database.providers.js>
+npx typeorm migration:run -d  
 
 
 testes

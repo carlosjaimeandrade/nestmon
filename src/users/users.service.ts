@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException, UnauthorizedException } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
 import { Model } from 'mongoose';
-import { User } from '../../dist/users/models/users.modal';
+import { User } from './models/users.modal';
 import { AuthService } from '../auth/auth.service';
 import { SignupDto } from './dto/signup.dto';
 import { SigninDto } from './dto/signin.dto';
@@ -14,7 +14,7 @@ export class UsersService {
     ) {}
 
     
-    public async sigup(signupDto: SignupDto): Promise<User> {
+    public async signup(signupDto: SignupDto): Promise<User> {
         const user = new this.usersModel(signupDto)
         return user.save()
     }
